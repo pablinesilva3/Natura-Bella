@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre - Natura Bella</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f6f8f4;
+      color: #333;
+    }
+
+    /* ===== CABEÇALHO ===== */
+    header {
+      background-color: #89b879;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #2f4f1d;
+      text-decoration: underline;
+    }
+
+    /* ===== CONTEÚDO ===== */
+    .about-section {
+      max-width: 1100px;
+      margin: 60px auto;
+      background: #fff;
+      border-radius: 20px;
+      padding: 50px 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-section::before {
+      content: "";
+      position: absolute;
+      top: -50px;
+      left: -50px;
+      width: 200px;
+      height: 200px;
+      background: rgba(137, 184, 121, 0.15);
+      border-radius: 50%;
+      z-index: 0;
+    }
+
+    .about-section::after {
+      content: "";
+      position: absolute;
+      bottom: -50px;
+      right: -50px;
+      width: 200px;
+      height: 200px;
+      background: rgba(137, 184, 121, 0.1);
+      border-radius: 50%;
+      z-index: 0;
+    }
+
+    .highlight-box {
+      background-color: #f5fbf3;
+      border-left: 6px solid #89b879;
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 45px;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+      transition: all 0.4s ease;
+    }
+
+    .highlight-box:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .about-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.3rem;
+      margin-bottom: 15px;
+      color: #5a7646;
+      text-align: center;
+      position: relative;
+    }
+
+    .about-section h2::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 3px;
+      background-color: #89b879;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    .about-text {
+      font-size: 1.1rem;
+      line-height: 1.9;
+      color: #3c3c3c;
+      text-align: justify;
+      margin-top: 10px;
+    }
+
+    /* ===== GALERIA ===== */
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 50px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .image-gallery img {
+      width: 260px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .image-gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+    }
+
+    /* ===== RODAPÉ ===== */
+    footer {
+      background-color: #89b879;
+      color: #fff;
+      text-align: center;
+      padding: 35px 15px;
+      font-size: 1rem;
+      margin-top: 80px;
+      letter-spacing: 0.3px;
+      position: relative;
+      z-index: 1;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 8px;
+      font-weight: 500;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== ANIMAÇÃO DE ENTRADA ===== */
+    .highlight-box {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .highlight-box.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.7s ease;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      .about-section {
+        padding: 30px 20px;
+        margin: 40px 15px;
+      }
+
+      .image-gallery img {
+        width: 90%;
+        height: auto;
+      }
+
+      header h1 {
+        font-size: 1.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<!-- Cabeçalho elegante da página de Contato -->
+<header style="
+  background: linear-gradient(90deg, #cbe7c5, #a6d6a1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  border-bottom: 2px solid #8fbf86;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Playfair Display', serif;
+">
+  <h1 style="
+    color: #2f4f2f;
+    font-size: 2rem;
+    letter-spacing: 1px;
+  ">
+    Natura Bella
+  </h1>
+
+  <nav>
+    <a href="index.html" style="
+      text-decoration: none;
+      color: #2f4f2f;
+      font-weight: 600;
+      margin-right: 25px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    ">Início 🌷</a>
+
+    <a href="produtos.html" style="
+      text-decoration: none;
+      color: #2f4f2f;
+      font-weight: 600;
+      margin-right: 25px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    ">Produtos</a>
+
+    <a href="sobre.html" style="
+      text-decoration: none;
+      color: #2f4f2f;
+      font-weight: 600;
+      margin-right: 25px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    ">Sobre</a>
+
+    <a href="/pabline/contado.html" style="
+      text-decoration: none;
+      color: #2f4f2f;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    ">Contato</a>
+  </nav>
+</header>
+
+<style>
+  /* Efeito hover nos links do menu */
+  header nav a:hover {
+    color: #1e3c1e;
+    border-bottom: 2px solid #1e3c1e;
+    padding-bottom: 3px;
+  }
+</style>
+
+
+  <section class="about-section">
+    <div class="highlight-box">
+      <h2>Beleza que vem da natureza</h2>
+      <p class="about-text">
+        Bem-vindo à <strong>Natura Bella</strong>, onde produtos orgânicos se encontram com cuidado com a saúde e o meio ambiente. Oferecemos experiências de bem-estar que respeitam a natureza e promovem um estilo de vida saudável e sustentável.
+      </p>
+    </div>
+
+    <div class="highlight-box">
+      <h2>Nossa História</h2>
+      <p class="about-text">
+        A Natura Bella nasceu em 2025 da paixão por um mundo mais saudável e equilibrado. Fundada pela equipe Pabline, Gabriela, Maria Eduarda, Kayky e Ruan Gabriel, a empresa surgiu com o objetivo de oferecer produtos naturais e orgânicos de alta qualidade, que respeitam tanto a saúde das pessoas quanto o meio ambiente.
+
+        O que começou como uma pequena ideia, trabalhando com pequenos produtores locais, rapidamente se transformou em uma missão: transformar a forma como consumimos, cuidamos do nosso corpo e respeitamos a natureza. Ao longo dos anos, crescemos mantendo nosso compromisso com a sustentabilidade, inovação e bem-estar.
+      </p>
+    </div>
+
+    <div class="highlight-box">
+      <h2>Nossos Produtos</h2>
+      <p class="about-text">
+        Na Natura Bella, acreditamos que a verdadeira beleza e saúde vêm da natureza. Por isso, todos os nossos produtos são cuidadosamente elaborados com ingredientes naturais e orgânicos, livres de químicos nocivos e respeitando a saúde da pele, cabelos e do meio ambiente. Nossa linha inclui cuidados com a pele, como hidratantes, séruns e máscaras faciais feitos com óleos vegetais, extratos botânicos e manteigas naturais que nutrem, protegem e proporcionam bem-estar. Também oferecemos cuidados capilares, como shampoos, condicionadores e máscaras nutritivas, desenvolvidos para devolver brilho, força e vitalidade aos cabelos de todos os tipos. Além disso, nossa linha de maquiagem natural utiliza pigmentos minerais e óleos orgânicos, valorizando a beleza natural enquanto hidrata e cuida da pele. Cada produto é pensado para unir eficácia, sensorialidade agradável e sustentabilidade, garantindo que cuidar de si mesmo seja também um ato de respeito à natureza.
+      </p>
+    </div>
+
+    <div class="highlight-box">
+      <h2>Compromisso com a Sustentabilidade</h2>
+      <p class="about-text">
+        Na Natura Bella, a sustentabilidade é um princípio central em todas as etapas da empresa. Desde a escolha de fornecedores até a embalagem dos produtos, buscamos minimizar impactos ambientais e adotar práticas responsáveis. Trabalhamos com produtores locais, incentivando a economia da comunidade e garantindo que os produtos sejam cultivados de forma ética e consciente. Priorizamos o uso de materiais recicláveis e biodegradáveis, além de ingredientes veganos e cruelty-free, respeitando a vida animal e os ecossistemas. Nosso objetivo é criar produtos que promovam saúde, beleza e bem-estar sem comprometer o futuro do planeta, permitindo que nossos clientes façam escolhas conscientes e sustentáveis no seu dia a dia.
+      </p>
+    </div>
+
+    <div class="highlight-box">
+      <h2>Junte-se a nós</h2>
+      <p class="about-text">
+        Fazer parte da comunidade Natura Bella é mais do que escolher produtos orgânicos — é adotar um estilo de vida consciente, saudável e sustentável. Ao optar pelos nossos produtos, você cuida da sua saúde e bem-estar, apoia a economia local e incentiva práticas agrícolas responsáveis. Cada compra é uma escolha que contribui para um futuro mais equilibrado para o planeta, permitindo que mais pessoas tenham acesso a produtos naturais e éticos. Convidamos você a juntar-se à nossa missão: viver de forma mais natural, valorizar a sustentabilidade e fazer parte de uma comunidade que respeita a natureza e promove beleza, saúde e equilíbrio em todos os aspectos da vida.
+      </p>
+    </div>
+
+    <div class="image-gallery">
+      <img src="https://i.pinimg.com/1200x/79/7b/af/797bafacf3c0d476ac75e326db238e25.jpg" alt="Plantas Naturais">
+      <img src="https://i.pinimg.com/1200x/1c/50/d1/1c50d151dd093131c3517931d62c7ddb.jpg" alt="Produtos Naturais">
+      <img src="https://i.pinimg.com/736x/79/90/ce/7990ced8e2361584bde7a82081e6ebd8.jpg" alt="Natureza">
+      <img src="https://i.pinimg.com/1200x/b7/d1/46/b7d146a5a0492734b4b5d4c999c981b1.jpg" alt="Produtos Orgânicos">
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Natura Bella - Todos os direitos reservados<br>
+    <a href="#">Política de Privacidade</a> |
+    <a href="https://www.instagram.com" target="_blank">Instagram</a> |
+    <a href="https://wa.me/55XXXXXXXXXX" target="_blank">WhatsApp</a>
+  </footer>
+
+  <script>
+    // Animação suave ao rolar
+    const boxes = document.querySelectorAll('.highlight-box');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+    boxes.forEach(box => observer.observe(box));
+  </script>
+</body>
+</html>

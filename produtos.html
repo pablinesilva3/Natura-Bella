@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nossos Produtos - Natura Bella</title>
+  <meta name="description" content="Descubra os produtos naturais da Natura Bella: cosméticos orgânicos, sustentáveis e feitos com amor à natureza. Conheça cada linha e seus benefícios.">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: #333;
+      background-color: #f8fbf6;
+      overflow-x: hidden;
+    }
+
+    /* ====== CABEÇALHO ====== */
+    header {
+      background-color: #89b879;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #2f4f1d;
+      text-decoration: underline;
+    }
+
+    /* ====== CONTEÚDO PRINCIPAL ====== */
+    main {
+      max-width: 1200px;
+      margin: 70px auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      color: #2d5016;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 1.2rem;
+      position: relative;
+    }
+
+    h1::after {
+      content: "";
+      width: 80px;
+      height: 3px;
+      background-color: #89b879;
+      display: block;
+      margin: 10px auto;
+      border-radius: 3px;
+    }
+
+    p.intro {
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto 3.5rem;
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .product-section {
+      margin-bottom: 4rem;
+      background: #fff;
+      padding: 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .product-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .product-section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-section h2 {
+      color: #2d5016;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 0.5rem;
+      text-align: left;
+      font-size: 1.9rem;
+    }
+
+    .product-section p {
+      margin-bottom: 1rem;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 1.8rem;
+      margin-top: 2rem;
+    }
+
+    .product-card {
+      background: #fefefe;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .product-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .product-card h3 {
+      color: #2d5016;
+      margin: 1rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .product-card p {
+      margin: 0 1rem 1.5rem;
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* ====== RODAPÉ ====== */
+    footer {
+      background-color: #89b879;
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 1rem;
+      margin-top: 60px;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: 500;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* ====== RESPONSIVIDADE ====== */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      main {
+        padding: 0 15px;
+      }
+
+      .product-section {
+        padding: 1.5rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .product-card img {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Cabeçalho elegante da página de Contato -->
+<header style="
+  background: linear-gradient(90deg, #cbe7c5, #a6d6a1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  border-bottom: 2px solid #8fbf86;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Playfair Display', serif;
+">
+  <h1 style="
+    color: #2f4f2f;
+    font-size: 2rem;
+    letter-spacing: 1px;
+  ">
+    Natura Bella
+  </h1>
+
+  <nav>
+    <a href="index.html" style="
+      text-decoration: none;
+      color: #2f4f2f;
+      font-weight: 600;
+      margin-right: 25px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    ">Início 🌷</a>
+
+    <a href="produtos.html" style="
+      text-decoration: none;
+      color: #2f4f2f;
+      font-weight: 600;
+      margin-right: 25px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    ">Produtos</a>
+
+    <a href="sobre.html" style="
+      text-decoration: none;
+      color: #2f4f2f;
+      font-weight: 600;
+      margin-right: 25px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    ">Sobre</a>
+
+    <a href="/pabline/contado.html" style="
+      text-decoration: none;
+      color: #2f4f2f;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    ">Contato</a>
+  </nav>
+</header>
+
+<style>
+  /* Efeito hover nos links do menu */
+  header nav a:hover {
+    color: #1e3c1e;
+    border-bottom: 2px solid #1e3c1e;
+    padding-bottom: 3px;
+  }
+</style>
+
+
+  <main>
+    <h1>Nossos Produtos Naturais</h1>
+    <p class="intro">
+      Cada produto da <strong>Natura Bella</strong> é desenvolvido com ingredientes cuidadosamente selecionados da natureza, combinando ciência e sustentabilidade. 
+      Nossa missão é cuidar de você de forma natural, segura e consciente, promovendo equilíbrio entre beleza, saúde e meio ambiente.
+    </p>
+
+    <div class="product-section">
+      <h2>🌸 Cuidados com a Pele</h2>
+      <p>
+        Nossa linha facial e corporal é formulada com extratos botânicos, óleos essenciais e manteigas naturais que nutrem e protegem a pele. 
+        Todos os produtos são livres de parabenos, sulfatos e fragrâncias artificiais.
+      </p>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="https://i.pinimg.com/736x/1f/43/09/1f430920e09ec4a550ba9400129ea2d7.jpg" alt="Sérum Facial">
+          <h3>Sérum Facial Hidratante</h3>
+          <p>
+            Enriquecido com ácido hialurônico vegetal e extrato de camomila, proporciona hidratação profunda e melhora a elasticidade da pele. 
+            Ideal para uso diário e para todos os tipos de pele.
+          </p>
+        </div>
+        <div class="product-card">
+          <img src="https://i.pinimg.com/736x/98/3b/f2/983bf2fbc2242a22db862a284ecf7311.jpg" alt="Máscara Facial">
+          <h3>Máscara Purificante</h3>
+          <p>
+            Com argila verde e chá verde, essa máscara elimina impurezas, equilibra a oleosidade e deixa a pele com um toque fresco e revigorado.
+          </p>
+        </div>
+        <div class="product-card">
+          <img src="https://i.pinimg.com/1200x/d5/1a/32/d51a32b577fe77cfa2359199af538344.jpg" alt="Hidratante Corporal">
+          <h3>Hidratante Corporal de Lavanda</h3>
+          <p>
+            Feito com manteiga de karité e óleo de lavanda, este hidratante acalma a pele e o espírito, deixando um perfume suave e natural.
+          </p>
+        </div>
+        <div class="product-card">
+    <img src="https://i.pinimg.com/1200x/c5/e0/fb/c5e0fba39fe4121575163441c24168fc.jpg" alt="Esfoliante Natural Facial">
+    <h3>Esfoliante Natural Facial</h3>
+    <p>
+        Feito com açúcar mascavo e óleo de amêndoas, remove células mortas suavemente, deixando a pele macia e com aparência renovada.
+    </p>
+</div>
+
+<div class="product-card">
+    <img src="https://i.pinimg.com/736x/92/bb/7b/92bb7b3c5f29e8db0b14d2bf039af57d.jpg" alt="Tônico Refrescante de Rosas">
+    <h3>Tônico Refrescante de Rosas</h3>
+    <p>
+        Formulado com água de rosas e aloe vera, equilibra o pH da pele, acalma irritações e proporciona frescor imediato.
+    </p>
+</div>
+
+<div class="product-card">
+    <img src="https://i.pinimg.com/736x/03/10/5c/03105cd27ce7b4a2af43ca546a16350a.jpg" alt="Creme Facial Noturno">
+    <h3>Creme Facial Noturno</h3>
+    <p>
+        Com manteiga de karité e óleo de jojoba, nutre profundamente durante o sono, restaurando a vitalidade e o viço natural da pele.
+    </p>
+</div>
+
+      </div>
+    </div>
+
+    <div class="product-section">
+      <h2>🌿 Cuidados Capilares</h2>
+      <p>
+        Nossa linha capilar une o poder dos óleos vegetais e extratos naturais para devolver vida, brilho e força aos cabelos.
+        Indicada para todos os tipos de fios, inclusive os que passaram por processos químicos.
+      </p>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="https://i.pinimg.com/736x/ea/64/e8/ea64e85d802f86142983c066e5fa7048.jpg" alt="Shampoo Natural">
+          <h3>Shampoo Revitalizante</h3>
+          <p>
+            Com óleo de coco e babosa, limpa suavemente e hidrata o couro cabeludo, estimulando o crescimento saudável dos fios.
+          </p>
+        </div>
+        <div class="product-card">
+          <img src="https://i.pinimg.com/736x/f8/72/86/f872869f4089ca32580560b722cb7ab0.jpg" alt="Máscara Capilar">
+          <h3>Máscara Capilar Nutritiva</h3>
+          <p>
+            Rica em óleos de argan e abacate, repara profundamente os fios danificados, devolvendo maciez e brilho intenso.
+          </p>
+        </div>
+        <div class="product-card">
+          <img src="https://i.pinimg.com/1200x/e4/3d/81/e43d81b04bc53fae42e5d9208b06f43f.jpg" alt="Condicionador Natural">
+          <h3>Condicionador Natural</h3>
+          <p>
+            Desembaraça com facilidade e sela as cutículas dos fios. A combinação de camomila e alecrim garante leveza e vitalidade.
+          </p>
+        </div>
+        <div class="product-card">
+    <img src="https://i.pinimg.com/736x/02/d5/7f/02d57f094a70a0b5c6c1f7279b21a2d3.jpg" alt="Óleo Capilar Nutritivo">
+    <h3>Óleo Capilar Nutritivo</h3>
+    <p>
+        Enriquecido com óleo de argan e coco, hidrata profundamente, reduz o frizz e proporciona brilho intenso sem deixar os fios pesados.
+    </p>
+</div>
+
+<div class="product-card">
+    <img src="https://i.pinimg.com/736x/24/88/b5/2488b52bebb427b6fd045d86513769da.jpg" alt="Tônico Capilar Fortalecedor">
+    <h3>Tônico Capilar Fortalecedor</h3>
+    <p>
+        Com extratos de alecrim e gengibre, estimula o crescimento capilar e fortalece a raiz, prevenindo a queda e promovendo fios mais resistentes.
+    </p>
+</div>
+
+<div class="product-card">
+    <img src="https://i.pinimg.com/1200x/81/84/6b/81846b48cc378b02e90d5cff02e04df8.jpg" alt="Leave-in Protetor Natural">
+    <h3>Leave-in Protetor Natural</h3>
+    <p>
+        Formulado com óleo de abacate e filtro UV natural, protege os cabelos contra o calor do secador e os danos do sol, mantendo-os macios e saudáveis.
+    </p>
+</div>
+
+      </div>
+    </div>
+
+    <div class="product-section">
+      <h2>💄 Maquiagem Natural</h2>
+      <p>
+        A maquiagem da Natura Bella valoriza sua beleza natural com pigmentos minerais, óleos orgânicos e texturas leves. 
+        Além de embelezar, nossos produtos tratam a pele com ativos hidratantes e antioxidantes.
+      </p>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="https://i.pinimg.com/1200x/50/b1/5e/50b15e0322c9ebaac2a93a9775eca00a.jpg" alt="Base Natural">
+          <h3>Base Natural</h3>
+          <p>
+            Textura fluida e acabamento natural. Enriquecida com óleo de jojoba e aloe vera, proporciona uniformidade e hidratação durante o dia.
+          </p>
+        </div>
+        <div class="product-card">
+          <img src="https://i.pinimg.com/1200x/b9/ac/04/b9ac0487198064062ab3b2cdec028f18.jpg" alt="Bálsamo Labial">
+          <h3>Bálsamo Labial</h3>
+          <p>
+            Feito com manteiga de karité e óleo de coco, protege os lábios contra o ressecamento, oferecendo hidratação e conforto durante todo o dia.
+          </p>
+        </div>
+        <div class="product-card">
+          <img src="https://i.pinimg.com/736x/ee/78/d2/ee78d2aa97fc19d4dbb1eed29c56657e.jpg" alt="Blush Natural">
+          <h3>Blush Natural</h3>
+          <p>
+            Com pigmentos minerais suaves, proporciona um toque de cor saudável às bochechas. Fórmula leve, sem parabenos e com efeito natural.
+          </p>
+        </div>
+        <div class="product-card">
+          <img src="https://i.pinimg.com/1200x/e9/04/60/e90460438356692992f3dda26d2d878d.jpg" alt="Sombra Mineral">
+          <h3>Sombra Mineral</h3>
+          <p>
+            Pigmentos minerais naturais que garantem cor intensa e duradoura. Ideal para um look leve e saudável, respeitando todos os tipos de pele.
+          </p>
+        </div>
+        <div class="product-card">
+    <img src="https://i.pinimg.com/1200x/41/25/69/412569e92dc4c82221fbf76d36b2a391.jpg" alt="Rímel Orgânico">
+    <h3>Rímel Orgânico</h3>
+    <p>
+        Com cera de abelha natural e óleo de rícino, alonga e nutre os cílios, oferecendo volume e definição sem agredir os olhos.
+    </p>
+</div>
+
+<div class="product-card">
+    <img src="https://i.pinimg.com/1200x/6a/e4/dc/6ae4dc0e93e4af36074d541c2619be5a.jpg" alt="Iluminador Natural">
+    <h3>Iluminador Natural</h3>
+    <p>
+        Feito com mica mineral e óleo de semente de uva, garante um brilho suave e saudável, destacando os pontos de luz do rosto de forma elegante.
+    </p>
+</div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Natura Bella - Todos os direitos reservados<br />
+    <a href="#">Política de Privacidade</a> |
+    <a href="https://www.instagram.com" target="_blank">Instagram</a> |
+    <a href="https://wa.me/55XXXXXXXXXX" target="_blank">WhatsApp</a>
+  </footer>
+
+  <script>
+    // Animação suave ao rolar
+    const sections = document.querySelectorAll('.product-section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+ 
+
+</body>
+</html>

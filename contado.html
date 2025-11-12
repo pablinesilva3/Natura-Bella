@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contato — Natura Bella</title>
+  <meta name="description" content="Página de contato da Natura Bella — cosméticos naturais. Fale conosco, envie uma mensagem ou agende um atendimento." />
+
+  <!-- Estilos (pode extrair para styles.css) -->
+  <style>
+    :root{
+      --bg: #F6FBF7;           /* fundo bem claro */
+      --card: #FFFFFF;
+      --accent: #A7D99E;       /* verde claro */
+      --accent-600: #88C87E;   /* verde um pouco mais saturado */
+      --muted: #6B6B6B;
+      --glass: rgba(255,255,255,0.6);
+      --radius: 14px;
+      --shadow: 0 8px 30px rgba(13,40,19,0.06);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    *{box-sizing: border-box}
+    html,body{height:100%;margin:0;background:var(--bg);color:#103014}
+
+    /* Decorativa: textura sutil com SVG de folhas no canto */
+    .hero-illustration{
+      position: absolute;right:0;top:0;pointer-events:none;opacity:0.12;filter:blur(0.4px);width:40%;max-width:520px;height:auto;
+    }
+
+    .container{
+      max-width:1100px;margin:48px auto;padding:28px;position:relative;
+    }
+
+    .grid{
+      display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:start;
+    }
+
+    header{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+    .logo{
+      width:64px;height:64px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent-600));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px;box-shadow:var(--shadow)
+    }
+    header h1{font-size:20px;margin:0}
+    header p{margin:0;color:var(--muted);font-size:14px}
+
+    /* Form card */
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
+    form .row{display:flex;gap:12px}
+    form label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+    input[type="text"],input[type="email"],textarea,select{
+      width:100%;padding:12px 14px;border-radius:10px;border:1px solid rgba(16,48,20,0.06);background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(250,255,246,0.9));font-size:15px;outline:none;resize:vertical
+    }
+    textarea{min-height:140px}
+
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border-radius:12px;border:0;background:linear-gradient(90deg,var(--accent-600),var(--accent));color:white;font-weight:600;cursor:pointer;box-shadow:0 6px 20px rgba(130,190,120,0.18)
+    }
+    .btn:active{transform:translateY(1px)}
+
+    /* Info lateral */
+    .side{
+      position:relative;display:flex;flex-direction:column;gap:18px
+    }
+    .contact-card{padding:18px;border-radius:12px;background:linear-gradient(180deg,var(--glass),rgba(255,255,255,0.62));backdrop-filter:blur(6px);border:1px solid rgba(136,200,126,0.12)}
+    .contact-card h3{margin:0 0 6px 0}
+    .contact-card p{margin:0;color:var(--muted);font-size:14px}
+
+    .socials{display:flex;gap:10px;margin-top:8px}
+    .socials a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;border:1px solid rgba(16,48,20,0.06);background:white;text-decoration:none}
+
+    /* Small helpers */
+    .muted{color:var(--muted);font-size:13px}
+    .success{background:#E8F8EE;border:1px solid #BEEBC5;padding:12px;border-radius:10px;color:#14582A}
+
+    /* Responsividade */
+    @media (max-width:980px){
+      .grid{grid-template-columns:1fr;}
+      .hero-illustration{display:none}
+      .container{padding:18px;margin:22px}
+    }
+
+  </style>
+</head>
+<body>
+  
+
+  <div class="container">
+
+    <img class="hero-illustration" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%23A7D99E'/%3E%3Cstop offset='1' stop-color='%2388C87E'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='url(%23g)'%3E%3Cpath d='M300 40c60 10 85 50 130 70s70 60 30 110-140 40-200 80-90 20-140-10-60-110-10-150 150-80 190-100z'/%3E%3Cpath d='M100 260c30 10 50 5 80-5s70 30 40 60-90 40-130 30-30-70 10-85z'/%3E%3C/g%3E%3C/svg%3E" alt="folhas decorativas" aria-hidden="true"/>
+
+    <header>
+      <div class="logo" aria-hidden="true">NB</div>
+      <div>
+        <h1>Fale com a Natura Bella</h1>
+        <p>Temos uma equipe pronta para tirar dúvidas sobre nossos cosméticos naturais, envio e parcerias.</p>
+      </div>
+    </header>
+
+    <main class="grid" aria-labelledby="main-title">
+
+      <!-- FORMULÁRIO PRINCIPAL -->
+      <section class="card" aria-labelledby="form-title">
+        <h2 id="form-title">Envie sua mensagem</h2>
+        <p class="muted">Responda em até 48 horas úteis. Para atendimento mais rápido, escreva telefone ou WhatsApp.</p>
+
+        <form id="contactForm" class="mt-6" novalidate>
+
+          <div style="margin-top:14px">
+            <label for="name">Nome</label>
+            <input id="name" name="name" type="text" placeholder="Seu nome completo" required />
+          </div>
+
+          <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap">
+            <div style="flex:1;min-width:180px">
+              <label for="email">E‑mail</label>
+              <input id="email" name="email" type="email" placeholder="seu@exemplo.com" required />
+            </div>
+
+            <div style="width:170px">
+              <label for="phone">Telefone/WhatsApp</label>
+              <input id="phone" name="phone" type="text" placeholder="(00) 8 8888-8888" />
+            </div>
+          </div>
+
+          <div style="margin-top:12px">
+            <label for="reason">Motivo</label>
+            <select id="reason" name="reason">
+              <option value="pedido">Informações sobre um pedido</option>
+              <option value="produto">Dúvida sobre produto</option>
+              <option value="parceria">Parceria / Revenda</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+
+          <div style="margin-top:12px">
+            <label for="message">Mensagem</label>
+            <textarea id="message" name="message" placeholder="Como podemos ajudar?" required></textarea>
+          </div>
+
+          <div style="display:flex;gap:12px;align-items:center;margin-top:14px">
+            <button type="submit" class="btn">Enviar mensagem</button>
+            <div id="formFeedback" role="status" aria-live="polite"></div>
+          </div>
+
+          <p class="muted" style="margin-top:10px;font-size:13px">Ao enviar, concorda com nosso processamento de dados para responder à sua solicitação. <a href="#">Política de privacidade</a>.</p>
+        </form>
+
+      </section>
+
+      <!-- LATERAL: CONTATOS RÁPIDOS E MAPA -->
+      <aside class="side">
+
+        <div class="contact-card">
+          <h3>Atendimento</h3>
+          <p>Seg–Sex • 9h–18h (exceto feriados)</p>
+          <div style="margin-top:10px">
+            <strong>Telefone:</strong>
+            <div class="muted">(62) 9 8888-8888</div>
+          </div>
+          <div style="margin-top:8px">
+            <strong>E‑mail:</strong>
+            <div class="muted">contato@naturabella.com</div>
+          </div>
+
+          <div class="socials" style="margin-top:10px">
+            <a href="#" title="Instagram" aria-label="Visitar Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="5" stroke="#103014" stroke-opacity="0.12"/></svg></a>
+            <a href="#" title="Facebook" aria-label="Visitar Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="5" stroke="#103014" stroke-opacity="0.12"/></svg></a>
+            <a href="#" title="WhatsApp" aria-label="Abrir WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="5" stroke="#103014" stroke-opacity="0.12"/></svg></a>
+          </div>
+        </div>
+
+        <div class="contact-card" aria-hidden="false">
+          <h3>Nosso endereço</h3>
+          <p class="muted">Rua das Flores, 123 · Bairro Verde · Trindade, GO</p>
+
+          
+        </div>
+
+        <div class="contact-card">
+          <h3>Fale por WhatsApp</h3>
+          <p class="muted">Clique para iniciar uma conversa rápida.</p>
+          <a class="btn" href="https://wa.me/62988888888?text=Ol%C3%A1%2C%20gostaria%20de%20informações" target="_blank" rel="noopener">Abrir WhatsApp</a>
+        </div>
+
+      </aside>
+
+    </main>
+
+    <footer style="margin-top:20px;text-align:center;color:var(--muted);font-size:14px">
+      © Natura Bella — Cosméticos Naturais
+    </footer>
+
+  </div>
+
+  <!-- Script: validação leve e interação (pode extrair para scripts.js) -->
+  <script>
+    (function(){
+      const form = document.getElementById('contactForm');
+      const feedback = document.getElementById('formFeedback');
+
+      function validateEmail(email){
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      }
+
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        feedback.innerHTML = '';
+
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+        const message = form.message.value.trim();
+
+        if(!name || !email || !message){
+          feedback.innerHTML = '<div class="success" style="background:#FFF4E6;border-color:#FFD8A8;color:#6B3E00">Por favor, preencha nome, e‑mail e mensagem.</div>';
+          return;
+        }
+        if(!validateEmail(email)){
+          feedback.innerHTML = '<div class="success" style="background:#FFEFF1;border-color:#FFCCD5;color:#7A1A28">E‑mail inválido. Verifique o endereço.</div>';
+          return;
+        }
+
+        // Aqui você pode integrar com seu backend (fetch para /api/contato)
+        // Como mock: exibir sucesso e limpar o formulário.
+        feedback.innerHTML = '<div class="success">Mensagem enviada com sucesso! Em até 48h úteis responderemos.</div>';
+        form.reset();
+
+        // animação simples para dar feedback visual
+        setTimeout(()=>{
+          feedback.innerHTML = '';
+        },8000);
+      });
+
+    })();
+    
+  document.getElementById('menuContato').addEventListener('click', function(e){
+    e.preventDefault();
+
+    // Container onde o contato vai aparecer
+    const container = document.getElementById('contactContainer');
+
+    // Fetch do arquivo contato.html
+    fetch('contato.html')
+      .then(response => {
+        if(!response.ok) throw new Error('Não foi possível carregar a página de contato.');
+        return response.text();
+      })
+      .then(html => {
+        container.innerHTML = html;
+        // Opcional: rolar até o container
+        container.scrollIntoView({behavior: 'smooth'});
+      })
+      .catch(err => {
+        container.innerHTML = `<p style="color:red;">Erro ao carregar contato: ${err.message}</p>`;
+      });
+  });
+
+
+  </script>
+</body>
+</html>

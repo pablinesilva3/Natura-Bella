@@ -3,44 +3,288 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Carrinho - Natura Bella</title>
+<title>Natura Bella - Carrinho e Finalização</title>
+
 <style>
 * { margin:0; padding:0; box-sizing:border-box; font-family: 'Arial', sans-serif; }
+
 body { background:#e6f4ea; padding-bottom:50px; color:#333; }
-header { background:#2d6a4f; color:#fff; padding:30px 20px; text-align:center; position:sticky; top:0; z-index:1000; box-shadow:0 5px 15px rgba(0,0,0,0.2); }
+
+header {
+    background:#2d6a4f;
+    color:#fff;
+    padding:30px 20px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
 header h1 { font-size:2.2rem; }
-.cart-container { max-width:900px; margin:40px auto; background:#fefcf8; border-radius:20px; padding:30px; box-shadow:0 10px 30px rgba(0,0,0,0.1); }
-.empty-cart { text-align:center; font-size:1.8rem; color:#4caf50; padding:60px 20px; }
+
+/* ============================= */
+/* CARRINHO */
+/* ============================= */
+
+.cart-container {
+    max-width:900px;
+    margin:40px auto;
+    background:#fefcf8;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.empty-cart {
+    text-align:center;
+    font-size:1.8rem;
+    color:#4caf50;
+    padding:60px 20px;
+}
+
 .cart-items { display:flex; flex-direction:column; gap:25px; }
-.cart-item { display:flex; justify-content:space-between; align-items:center; background:#ffffff; border-radius:15px; padding:15px 20px; box-shadow:0 5px 15px rgba(0,0,0,0.05); transition:transform 0.3s, box-shadow 0.3s; }
-.cart-item:hover { transform:translateY(-3px); box-shadow:0 10px 25px rgba(0,0,0,0.12); }
-.cart-item img { width:100px; height:100px; object-fit:cover; border-radius:15px; border:2px solid #c3e6cb; }
+
+.cart-item {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#ffffff;
+    border-radius:15px;
+    padding:15px 20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+    transition:transform 0.3s, box-shadow 0.3s;
+}
+
+.cart-item:hover {
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.12);
+}
+
+.cart-item img {
+    width:100px; height:100px;
+    object-fit:cover;
+    border-radius:15px;
+    border:2px solid #c3e6cb;
+}
+
 .cart-item-details { flex:1; margin-left:20px; }
-.cart-item-name { font-weight:bold; font-size:1.2rem; color:#2d5016; margin-bottom:5px; }
-.cart-item-quantity { font-size:1rem; color:#555; display:flex; align-items:center; gap:10px; }
-.quantity-btn { background:#2d5016; color:white; border:none; padding:5px 10px; border-radius:8px; cursor:pointer; font-weight:bold; transition:0.3s; }
+
+.cart-item-name {
+    font-weight:bold;
+    font-size:1.2rem;
+    color:#2d5016;
+    margin-bottom:5px;
+}
+
+.cart-item-quantity {
+    font-size:1rem;
+    color:#555;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.quantity-btn {
+    background:#2d5016;
+    color:white;
+    border:none;
+    padding:5px 10px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+}
+
 .quantity-btn:hover { background:#1a3009; }
-.remove-btn { background:red; color:white; border:none; padding:5px 10px; border-radius:8px; cursor:pointer; font-weight:bold; transition:0.3s; }
+
+.remove-btn {
+    background:red;
+    color:white;
+    border:none;
+    padding:5px 10px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+}
+
 .remove-btn:hover { background:#900; }
-.cart-item-price { font-size:1.2rem; font-weight:bold; color:#4caf50; }
-.cart-total { text-align:right; font-size:1.5rem; margin-top:30px; font-weight:bold; color:#2d5016; }
-.checkout-btn { display:block; width:100%; background:linear-gradient(90deg, #2d6a4f, #8fbc8f); color:white; border:none; padding:18px; border-radius:15px; font-size:1.2rem; margin-top:25px; cursor:pointer; font-weight:bold; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition:transform 0.3s, box-shadow 0.3s; }
-.checkout-btn:hover { transform:translateY(-3px); box-shadow:0 10px 25px rgba(0,0,0,0.15); }
-@media(max-width:768px){ .cart-item { flex-direction:column; align-items:flex-start; } .cart-item img { width:100%; height:auto; margin-bottom:10px; } .cart-item-details { margin-left:0; } .cart-total { text-align:center; } }
+
+.cart-item-price {
+    font-size:1.2rem;
+    font-weight:bold;
+    color:#4caf50;
+}
+
+.cart-total {
+    text-align:right;
+    font-size:1.5rem;
+    margin-top:30px;
+    font-weight:bold;
+    color:#2d5016;
+}
+
+.checkout-btn {
+    display:block;
+    width:100%;
+    background:linear-gradient(90deg, #2d6a4f, #8fbc8f);
+    color:white;
+    border:none;
+    padding:18px;
+    border-radius:15px;
+    font-size:1.2rem;
+    margin-top:25px;
+    cursor:pointer;
+    font-weight:bold;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:transform 0.3s, box-shadow 0.3s;
+}
+
+.checkout-btn:hover {
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ============================= */
+/* CHECKOUT (FORMULÁRIO) */
+/* ============================= */
+
+#checkout-form {
+    display:none;
+    margin-top:40px;
+    padding:30px;
+    background:white;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+#checkout-form h2 {
+    margin-bottom:15px;
+    color:#2d6a4f;
+}
+
+label { font-weight:bold; }
+
+input, select {
+    width:100%;
+    padding:12px;
+    margin-top:5px;
+    margin-bottom:20px;
+    border:1px solid #c9e2c9;
+    border-radius:10px;
+}
+
+input:focus, select:focus {
+    border-color:#2d6a4f;
+    box-shadow:0 0 10px #2d6a4f55;
+}
+
+.finalizar-btn {
+    background:#2d6a4f;
+    color:white;
+    padding:16px;
+    font-size:1.2rem;
+    border:none;
+    width:100%;
+    border-radius:12px;
+    cursor:pointer;
+    transition:0.3s;
+    margin-top:15px;
+}
+
+.finalizar-btn:hover {
+    background:#1b4e36;
+    transform:translateY(-2px);
+}
+
+@media(max-width:768px){
+    .cart-item { flex-direction:column; align-items:flex-start; }
+    .cart-item img { width:100%; height:auto; margin-bottom:10px; }
+    .cart-item-details { margin-left:0; }
+    .cart-total { text-align:center; }
+}
 </style>
 </head>
 <body>
+
 <header>
-    <h1>Carrinho - Natura Bella</h1>
+    <h1>Natura Bella – Carrinho e Finalização</h1>
 </header>
 
 <div class="cart-container">
+    
+    <!-- CARRINHO -->
     <div id="empty-cart" class="empty-cart">🛒 Seu carrinho está vazio!</div>
     <div id="cart-items" class="cart-items"></div>
     <div id="cart-total" class="cart-total" style="display:none;">
         Total: R$ <span id="total-value">0.00</span>
     </div>
+
     <button id="checkout-btn" class="checkout-btn" style="display:none;">Finalizar Compra</button>
+
+    <!-- CHECKOUT (COMEÇA AQUI) -->
+    <div id="checkout-form">
+        <h2>Finalização da Compra</h2>
+
+        <label>Nome Completo</label>
+        <input type="text" placeholder="Seu nome completo">
+
+        <label>E-mail</label>
+        <input type="email" placeholder="seuemail@exemplo.com">
+
+        <label>Telefone</label>
+        <input type="text" placeholder="(XX) XXXXX-XXXX">
+
+        <label>Endereço Completo</label>
+        <input type="text" placeholder="Rua, número, bairro">
+
+        <label>Cidade</label>
+        <input type="text">
+
+       <label>Estado</label>
+<select>
+    <option value="">Selecione</option>
+    <option value="AC">Acre (AC)</option>
+    <option value="AL">Alagoas (AL)</option>
+    <option value="AP">Amapá (AP)</option>
+    <option value="AM">Amazonas (AM)</option>
+    <option value="BA">Bahia (BA)</option>
+    <option value="CE">Ceará (CE)</option>
+    <option value="DF">Distrito Federal (DF)</option>
+    <option value="ES">Espírito Santo (ES)</option>
+    <option value="GO">Goiás (GO)</option>
+    <option value="MA">Maranhão (MA)</option>
+    <option value="MT">Mato Grosso (MT)</option>
+    <option value="MS">Mato Grosso do Sul (MS)</option>
+    <option value="MG">Minas Gerais (MG)</option>
+    <option value="PA">Pará (PA)</option>
+    <option value="PB">Paraíba (PB)</option>
+    <option value="PR">Paraná (PR)</option>
+    <option value="PE">Pernambuco (PE)</option>
+    <option value="PI">Piauí (PI)</option>
+    <option value="RJ">Rio de Janeiro (RJ)</option>
+    <option value="RN">Rio Grande do Norte (RN)</option>
+    <option value="RS">Rio Grande do Sul (RS)</option>
+    <option value="RO">Rondônia (RO)</option>
+    <option value="RR">Roraima (RR)</option>
+    <option value="SC">Santa Catarina (SC)</option>
+    <option value="SP">São Paulo (SP)</option>
+    <option value="SE">Sergipe (SE)</option>
+    <option value="TO">Tocantins (TO)</option>
+</select>
+
+
+        <label>Forma de Pagamento</label>
+        <select>
+            <option value="">Selecione</option>
+            <option>Pix</option>
+            <option>Cartão de Crédito</option>
+            <option>Boleto Bancário</option>
+        </select>
+
+        <button class="finalizar-btn">Confirmar Pedido 💚</button>
+    </div>
+
 </div>
 
 <script>
@@ -49,20 +293,21 @@ const emptyCart = document.getElementById('empty-cart');
 const cartTotalEl = document.getElementById('cart-total');
 const totalValueEl = document.getElementById('total-value');
 const checkoutBtn = document.getElementById('checkout-btn');
+const checkoutForm = document.getElementById('checkout-form');
 
-// Pega o carrinho do localStorage
+// Recupera do localStorage
 let cart = JSON.parse(localStorage.getItem('cart')) || {};
 
-// Atualiza o carrinho visual
 function updateCart() {
     cartItemsContainer.innerHTML = '';
     let total = 0;
-    const productNames = Object.keys(cart);
+    const items = Object.keys(cart);
 
-    if(productNames.length === 0){
+    if(items.length === 0){
         emptyCart.style.display = 'block';
         cartTotalEl.style.display = 'none';
         checkoutBtn.style.display = 'none';
+        checkoutForm.style.display = 'none';
         return;
     }
 
@@ -70,14 +315,14 @@ function updateCart() {
     cartTotalEl.style.display = 'block';
     checkoutBtn.style.display = 'block';
 
-    productNames.forEach(name => {
+    items.forEach(name => {
         const item = cart[name];
         total += item.price * item.quantity;
 
         const div = document.createElement('div');
         div.classList.add('cart-item');
         div.innerHTML = `
-            <img src="${item.image}" alt="${name}">
+            <img src="${item.image}">
             <div class="cart-item-details">
                 <div class="cart-item-name">${name}</div>
                 <div class="cart-item-quantity">
@@ -86,6 +331,7 @@ function updateCart() {
                     <button class="quantity-btn" data-action="increase" data-name="${name}">+</button>
                 </div>
             </div>
+
             <div>
                 <div class="cart-item-price">R$ ${(item.price * item.quantity).toFixed(2)}</div>
                 <button class="remove-btn" data-name="${name}">Remover</button>
@@ -97,29 +343,39 @@ function updateCart() {
     totalValueEl.textContent = total.toFixed(2);
     localStorage.setItem('cart', JSON.stringify(cart));
 
-    // Eventos de + / - / remover
     document.querySelectorAll('.quantity-btn').forEach(btn => {
         btn.onclick = () => {
             const name = btn.dataset.name;
+
             if(btn.dataset.action === 'increase') cart[name].quantity++;
-            if(btn.dataset.action === 'decrease') {
+            if(btn.dataset.action === 'decrease'){
                 cart[name].quantity--;
                 if(cart[name].quantity <= 0) delete cart[name];
             }
+
             updateCart();
         }
     });
 
     document.querySelectorAll('.remove-btn').forEach(btn => {
         btn.onclick = () => {
-            const name = btn.dataset.name;
-            delete cart[name];
+            delete cart[btn.dataset.name];
             updateCart();
         }
     });
 }
 
+checkoutBtn.onclick = () => {
+    checkoutForm.style.display = "block";
+    checkoutBtn.scrollIntoView({ behavior: "smooth" });
+};
+
 updateCart();
+document.querySelector(".finalizar-btn").onclick = () => {
+    window.location.href = "thankyou.html";
+};
+
 </script>
+
 </body>
 </html>

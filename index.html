@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <title>Natura Bella</title>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +15,7 @@
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #313131;
             background-color: #fff;
         }
 
@@ -108,10 +107,6 @@
             transition: color 0.3s;
         }
 
-        .cart-btn:hover {
-            color: #2d5016;
-        }
-
         .cart-count {
             position: absolute;
             top: -8px;
@@ -135,19 +130,20 @@
             overflow: hidden;
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url('https://images.unsplash.com/photo-1596755389378-c31d21fd1273?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.1;
-            z-index: 1;
-        }
+      .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://images.unsplash.com/photo-1596755389378-c31d21fd1273?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    z-index: 1;
+}
+
 
         .hero-content {
             position: relative;
@@ -165,7 +161,7 @@
 
         .hero .subtitle {
             font-size: 1.8rem;
-            color: #8fbc8f;
+            color: #6b756b;
             margin-bottom: 1.5rem;
         }
 
@@ -215,9 +211,7 @@
             background: #2d5016;
             color: white;
             transform: translateY(-2px);
-            
-}
-        
+        }
 
         /* Features Section */
         .features {
@@ -240,7 +234,7 @@
         .feature-icon {
             width: 80px;
             height: 80px;
-            background: #2d5016;
+            background: #4a603b;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -272,13 +266,13 @@
 
         .section-title h2 {
             font-size: 2.5rem;
-            color: #2d5016;
+            color: rgb(126, 142, 115);
             margin-bottom: 1rem;
         }
 
         .section-title p {
             font-size: 1.1rem;
-            color: #666;
+            color: #2f2f2f;
             max-width: 600px;
             margin: 0 auto;
         }
@@ -391,7 +385,7 @@
         }
 
         .product-badge.new {
-            background: #8fbc8f;
+            background: #586e58;
         }
 
         .product-info {
@@ -400,12 +394,12 @@
 
         .product-info h3 {
             font-size: 1.1rem;
-            color: #333;
+            color: #567057;
             margin-bottom: 0.5rem;
         }
 
         .product-info p {
-            color: #666;
+            color: #3d3c3c;
             font-size: 0.9rem;
             margin-bottom: 1rem;
             line-height: 1.4;
@@ -436,7 +430,7 @@
         }
 
         .add-to-cart {
-            background: #2d5016;
+            background: #314722;
             color: white;
             border: none;
             width: 40px;
@@ -458,7 +452,6 @@
             color: white;
             padding: 80px 0;
             text-align: center;
-            margin-left: -100px;
         }
 
         .newsletter h2 {
@@ -473,11 +466,13 @@
         }
 
         .newsletter-form {
-            display: flex;
-            max-width: 400px;
-            margin: 0 auto;
-            gap: 1rem;
-        }
+    display: flex;
+    flex-direction: column; /* 👈 ISSO move o botão para baixo */
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
 
         .newsletter-form input {
             flex: 1;
@@ -486,7 +481,6 @@
             border-radius: 50px;
             outline: none;
             font-size: 1rem;
-        
         }
 
         .newsletter-form button {
@@ -507,7 +501,7 @@
 
         /* Footer */
         footer {
-            background: #1a1a1a;
+            background: #1b340a;
             color: white;
             padding: 60px 0 30px;
         }
@@ -521,7 +515,7 @@
 
         .footer-section h3 {
             margin-bottom: 1rem;
-            color: #8fbc8f;
+            color: #fbfbfb;
         }
 
         .footer-section p {
@@ -545,7 +539,7 @@
         }
 
         .footer-section ul a:hover {
-            color: #8fbc8f;
+            color: #3a3a3a;
         }
 
         .social-links {
@@ -560,7 +554,7 @@
             justify-content: center;
             width: 40px;
             height: 40px;
-            background: #2d5016;
+            background: #3d4636;
             color: white;
             border-radius: 50%;
             text-decoration: none;
@@ -568,12 +562,12 @@
         }
 
         .social-links a:hover {
-            background: #8fbc8f;
+            background: #363636;
             transform: translateY(-2px);
         }
 
         .footer-bottom {
-            border-top: 1px solid #333;
+            border-top: 1px solid #4f4f4f;
             padding-top: 2rem;
             text-align: center;
             color: #ccc;
@@ -632,67 +626,202 @@
                 grid-template-columns: 1fr;
             }
         }
-        /* ===== Carrossel de Início ===== */
-.carousel-section {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  margin-top: 90px; /* espaço por causa do header fixo */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 50vh; /* altura menor */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+
+    /* imagem de fundo */
+    background-image: url('https://images.unsplash.com/photo-1596755389378-c31d21fd1273?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080');
+    background-size: cover;
+    background-position: center;
 }
 
-.carousel-container {
-  width: 100%;
-  position: relative;
+/* sobreposição para destacar texto */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 1;
 }
 
-.carousel-track {
-  display: flex;
-  width: calc(100% * 15);
-  animation: slideShow 60s linear infinite;
+/* conteúdo acima da sobreposição */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
 }
 
-.carousel-track img {
-  width: 100%;
-  height: 70vh;
-  object-fit: cover;
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
 }
 
-/* Animação contínua */
-@keyframes slideShow {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+.hero .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-  .carousel-track img {
-    height: 40vh;
-  }
+.hero p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* botões */
+.btn-group .btn {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #ff7f50;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #ff6333;
+}
+
+.btn-outline {
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-outline:hover {
+    background-color: white;
+    color: #333;
+}
+
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: visible; /* permite que os botões apareçam sem corte */
+    padding: 0 20px;   /* dá espaçamento nas laterais */
+    box-sizing: border-box;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 20px; /* dá espaço interno para os botões e texto */
+    box-sizing: border-box;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center; /* centraliza os botões horizontalmente */
+    flex-wrap: wrap; /* permite quebra de linha em telas pequenas */
+    gap: 15px; /* espaço entre os botões */
+    margin-top: 20px;
+}
+
+.btn-group .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Botão principal */
+.btn-primary {
+    background-color: #FF7F50;
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #FF6333;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+} 
+
+/* Botão “Saiba Mais” sólido verde */
+.btn-green {
+    background-color: #214229; /* verde sólido */
+    color: white; /* letras brancas */
+    border: 2px solid #214629; /* borda verde igual ao fundo */
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn-green:hover {
+    background-color: #218838; /* verde mais escuro ao passar o mouse */
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
 }
 
 
     </style>
 </head>
+
+<head>
+<style>
+    body { font-family: Arial,sans-serif; padding:20px; }
+    .product-card { margin-bottom:20px; background:#fefcf8; padding:15px; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.1); }
+    .cart-btn { position:fixed; top:20px; right:20px; background:#2d5016; color:white; border:none; padding:10px 15px; border-radius:50px; cursor:pointer; }
+    .cart-count { background:red; border-radius:50%; padding:2px 6px; margin-left:5px; }
+</style>
+</head>
+
 <body>
     <!-- Header -->
     <header>
         <div class="container">
             <div class="header-content">
                 <a href="#" class="logo">Natura Bella</a>
-                <nav>
-                    <ul>
-                        <li><a href="#inicio">Início</a></li>
+              <nav>
+    <ul>
+        <li><a href="index.html">Início</a></li>
         <li><a href="produtos.html">Produtos</a></li>
         <li><a href="sobre.html">Sobre</a></li>
         <li><a href="contado.html">Contato</a></li>
 
-                    </ul>
-                </nav>
+
+    </ul>
+</nav>
+
+           
                 <div class="header-actions">
                     <div class="search-box">
                         <input type="text" placeholder="Buscar produtos...">
                     </div>
-                    <button class="cart-btn"><a href="carrinho.html">🛒</a> 
+                    <button class="cart-btn">
+                        🛒
                         <span class="cart-count">0</span>
                     </button>
                 </div>
@@ -700,35 +829,92 @@
         </div>
     </header>
 
-<!-- Carrossel de Início -->
-<section class="carousel-section" id="inicio">
-  <div class="carousel-container">
-    <div class="carousel-track">
-      <img src="https://images.unsplash.com/photo-1596464716121-1c7b4b8b60a4?auto=format&fit=crop&w=1600&h=600" alt="">
-      <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&w=1600&h=600" alt="">
-      <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=1600&h=600" alt="">
-      <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1600&h=600" alt="">
-      <img src="https://images.unsplash.com/photo-1619946794135-5bc917a27793?auto=format&fit=crop&w=1600&h=600" alt="">
-      <img src="https://images.unsplash.com/photo-1582004899011-27d17c5dd6de?auto=format&fit=crop&w=1600&h=600" alt="">
-      <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1600&h=600" alt="">
-      <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=1600&h=600" alt="">
-      <img src="https://images.unsplash.com/photo-1619946794135-5bc917a27793?auto=format&fit=crop&w=1600&h=600" alt="">
-      <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&w=1600&h=600" alt="">
-      <img src="https://images.unsplash.com/photo-1596464716121-1c7b4b8b60a4?auto=format&fit=crop&w=1600&h=600" alt="">
-      <img src="https://images.unsplash.com/photo-1582004899011-27d17c5dd6de?auto=format&fit=crop&w=1600&h=600" alt="">
-      <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1600&h=600" alt="">
-      <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=1600&h=600" alt="">
-      <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1600&h=600" alt="">
+    <!-- Hero Section -->
+    
+        <section class="hero" id="inicio">
+    <div class="hero-content">
+        <h1>Beleza Natural</h1>
+        <div class="subtitle">Para Sua Pele</div>
+        <p>Descubra nossa linha completa de cosméticos naturais, feitos com ingredientes orgânicos cuidadosamente selecionados para realçar sua beleza natural.</p>
+        <div class="btn-group">
+            <a href="#produtos" class="btn btn-primary">Explorar Produtos</a>
+            <a href="#sobre" class="btn btn-green">Saiba Mais</a>
+
     </div>
-  </div>
 </section>
 
+     <main>
+    <!-- CARROSSEL INFINITO -->
+    <section class="carousel">
+      <div class="carousel-track">
+        <img src="https://i.pinimg.com/1200x/1b/f9/3d/1bf93d9de6ea6674f7c8bcec5447134b.jpg" alt="">
+        <img src="https://i.pinimg.com/1200x/5f/66/04/5f6604aa3b9684a63b66e394e40d6dd9.jpg" alt="">
+        <img src="https://i.pinimg.com/736x/6c/b5/19/6cb51916bb3291bfc768f17aad8167ef.jpg" alt="">
+        <img src="https://i.pinimg.com/1200x/3a/5a/c2/3a5ac24243d5de701cd7bdb9c0318b8a.jpg" alt="">
+        <img src="https://i.pinimg.com/736x/4d/12/48/4d124857b582ec74b0a828354057fd8b.jpg" alt="">
+        <img src="https://i.pinimg.com/736x/69/d1/97/69d1979b0259dd28dad731a1f503eb16.jpg" alt="">
+        <img src="https://i.pinimg.com/736x/39/05/db/3905db946481403c88c2a688587e717b.jpg" alt="">
+        <img src="https://i.pinimg.com/736x/24/80/bc/2480bcbce2508757282627763c70be2c.jpg" alt="">
+        <img src="https://i.pinimg.com/736x/de/77/7e/de777eaa724f43f0521f0207b4fcaf15.jpg" alt="">
+        <img src="https://i.pinimg.com/736x/a0/3d/e9/a03de9348cddf99cc786b9c2f9ac3fc3.jpg" alt="">
+        <!-- repete pra manter o loop suave -->
+        <img src="https://i.pinimg.com/736x/75/ca/24/75ca24030c3b4446312ebdca59059c71.jpg" alt="">
+        <img src="https://i.pinimg.com/1200x/98/a0/17/98a017fbc43414ef5043f961b04b87ed.jpg" alt="">
+        <img src="https://i.pinimg.com/736x/49/12/d8/4912d83a2ba054166c1c7c07c642e5a5.jpg" alt="">
+        <img src="https://i.pinimg.com/736x/cc/54/d6/cc54d65cf4b2a2381639cc299bd7922d.jpg" alt="">
+        <img src="https://i.pinimg.com/736x/85/56/c0/8556c071bb572fb05021997ec6830ae6.jpg" alt="">
+      </div>
+    </section>
+  </main>
+  <style>
+/* Estilo do carrossel */
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  background-color: #f3fff3;
+  padding: 20px 0;
+  margin-top: 30px;
+}
 
-    <!-- Controles -->
-    <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
-    <button class="next" onclick="mudarSlide(1)">&#10095;</button>
-  </div>
-</section>
+.carousel-track {
+  display: flex;
+  gap: 15px;
+  animation: scroll 40s linear infinite;
+}
+
+.carousel img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.carousel img:hover {
+  transform: scale(1.05);
+}
+
+/* Animação do loop */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Rodapé */
+footer {
+  background-color: #2d5016;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.95rem;
+  margin-top: 50px;
+}
+
+
+</style>
+
+</body>
 
 
     <!-- Features Section -->
@@ -758,8 +944,7 @@
             </div>
         </div>
     </section>
-
-    <!-- Categories Section -->
+   <!-- Categories Section -->
     <section class="categories">
         <div class="container">
             <div class="section-title">
@@ -768,10 +953,17 @@
             </div>
             <div class="categories-grid">
                 <div class="category-card">
-                    <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Cuidados com a Pele">
+                    <img src="https://i.pinimg.com/736x/be/1d/dc/be1ddc7c4c55eebcfb5cfc87f80567a5.jpg" alt="Cuidados com a Pele">
                     <div class="category-overlay">
                         <h3>Cuidados com a Pele</h3>
                         <p>Hidratantes, séruns e tratamentos naturais</p>
+                    </div>
+                </div>
+                   <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Cuidados Capilares">
+                    <div class="category-overlay">
+                        <h3>Cuidados Capilares</h3>
+                        <p>Shampoos, condicionadores e máscaras naturais</p>
                     </div>
                 </div>
                 <div class="category-card">
@@ -781,108 +973,685 @@
                         <p>Bases, batons e sombras com pigmentos naturais</p>
                     </div>
                 </div>
-                <div class="category-card">
-                    <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Cuidados Capilares">
-                    <div class="category-overlay">
-                        <h3>Cuidados Capilares</h3>
-                        <p>Shampoos, condicionadores e máscaras naturais</p>
-                    </div>
+               
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section class="products" id="produtos">
-        <div class="container">
-            <div class="section-title">
-                <h2>Produtos em Destaque</h2>
-                <p>Nossos produtos mais populares, escolhidos com carinho para você</p>
-            </div>
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="Sérum Facial Hidratante">
-                        <div class="product-badge">-15%</div>
-                    </div>
-                    <div class="product-info">
-                        <h3>Sérum Facial Hidratante</h3>
-                        <p>Sérum facial com ácido hialurônico e extratos botânicos orgânicos para hidratação profunda.</p>
-                        <div class="product-footer">
-                            <div class="product-price">
-                                <span class="current-price">R$ 89,90</span>
-                                <span class="original-price">R$ 105,90</span>
-                            </div>
-                            <button class="add-to-cart">+</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="Bálsamo Labial Natural">
-                    </div>
-                    <div class="product-info">
-                        <h3>Bálsamo Labial Natural</h3>
-                        <p>Bálsamo labial nutritivo com manteiga de karité e óleo de coco para lábios macios.</p>
-                        <div class="product-footer">
-                            <div class="product-price">
-                                <span class="current-price">R$ 25,90</span>
-                            </div>
-                            <button class="add-to-cart">+</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1582004899011-27d17c5dd6de?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="Sabonete Artesanal de Lavanda">
-                        <div class="product-badge new">Novo</div>
-                    </div>
-                    <div class="product-info">
-                        <h3>Sabonete Artesanal de Lavanda</h3>
-                        <p>Sabonete artesanal com lavanda e óleos essenciais, ideal para relaxamento.</p>
-                        <div class="product-footer">
-                            <div class="product-price">
-                                <span class="current-price">R$ 32,90</span>
-                            </div>
-                            <button class="add-to-cart">+</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="Máscara Facial Purificante">
-                    </div>
-                    <div class="product-info">
-                        <h3>Máscara Facial Purificante</h3>
-                        <p>Máscara facial com argila verde e extrato de chá verde para purificar a pele.</p>
-                        <div class="product-footer">
-                            <div class="product-price">
-                                <span class="current-price">R$ 45,90</span>
-                            </div>
-                            <button class="add-to-cart">+</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+     <!-- Products Section -->
+<section class="products" id="produtos">
+    <div class="container">
+        <div class="section-title">
+            <h2>Produtos em Destaque</h2>
+            <p>Nossos produtos mais populares, escolhidos com carinho para você</p>
         </div>
-    </section>
-
-    <!-- Newsletter Section -->
-    <section class="newsletter">
-        <div class="container">
-            <h2>Fique por Dentro das Novidades</h2>
-            <p>Receba dicas de beleza, lançamentos exclusivos e ofertas especiais diretamente no seu e-mail</p>
-            <form class="newsletter-form">
-          <input type="name" placeholder="Seu nome completo" required>
-                <input type="email" placeholder="Seu melhor e-mail" required>
         
-                <button type="submit">Inscrever-se</button>
-            </form>
+
+    <!-- ===== CUIDADOS COM A PELE ===== -->
+   <div class="category-block">
+  <div class="section-title">
+    <h2 class="category-title">Cuidados com a Pele</h2>
+    <p class="category-desc">Produtos selecionados para manter sua pele hidratada, purificada e radiante.</p>
+  </div>
+  <div class="products-grid">
+    <!-- Produto 1 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/736x/00/22/cf/0022cfee699737f201fffb0ee76a2fa1.jpg" alt="Sérum Facial Hidratante">
+        <div class="product-badge">-15%</div>
+      </div>
+      <div class="product-info">
+        <h3>Sérum Facial Hidratante</h3>
+        <p>Sérum facial com ácido hialurônico e extratos botânicos orgânicos.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 89,90</span>
+            <span class="original-price">R$ 105,90</span>
+          </div>
+          <button class="add-to-cart" data-name="Sérum Facial Hidratante" data-price="89.90">+</button>
         </div>
-    </section>
+      </div>
+    </div>
+
+    <!-- Produto 2 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/736x/9f/9c/58/9f9c5803f89c5afc7390043324534db4.jpg" alt="Bálsamo Labial Natural">
+      </div>
+      <div class="product-info">
+        <h3>Bálsamo Labial Natural</h3>
+        <p>Bálsamo nutritivo com manteiga de karité e óleo de coco para lábios macios.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 25,90</span>
+          </div>
+          <button class="add-to-cart" data-name="Bálsamo Labial Natural" data-price="25.90">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 3 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/736x/6f/c6/2f/6fc62f52ee74f1ef01d9c121143e54be.jpg" alt="Sabonete Artesanal de Lavanda">
+        <div class="product-badge new">Novo</div>
+      </div>
+      <div class="product-info">
+        <h3>Sabonete Artesanal de Lavanda</h3>
+        <p>Sabonete artesanal com lavanda e óleos essenciais.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 32,90</span>
+          </div>
+          <button class="add-to-cart" data-name="Sabonete Artesanal de Lavanda" data-price="32.90">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 4 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/736x/6a/22/7e/6a227ebcde840176d3bf441f67c50a4e.jpg" alt="Máscara Facial Purificante">
+      </div>
+      <div class="product-info">
+        <h3>Máscara Facial Purificante</h3>
+        <p>Máscara com argila verde e extrato de chá verde.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 45,90</span>
+          </div>
+          <button class="add-to-cart" data-name="Máscara Facial Purificante" data-price="45.90">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 5 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/1200x/4a/c5/63/4ac56304f6005f63dc737b0615e6a533.jpg" alt="Creme Hidratante para Mãos">
+      </div>
+      <div class="product-info">
+        <h3>Creme Hidratante para Mãos</h3>
+        <p>Creme nutritivo com manteiga de karité e óleo de amêndoas.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 39,90</span>
+          </div>
+          <button class="add-to-cart" data-name="Creme Hidratante para Mãos" data-price="39.90">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 6 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/736x/b1/7e/ac/b17eac910875524d7582fe02f4c1e623.jpg" alt="Óleo Corporal Relaxante">
+        <div class="product-badge">-10%</div>
+      </div>
+      <div class="product-info">
+        <h3>Óleo Corporal Relaxante</h3>
+        <p>Óleo com lavanda e camomila para relaxamento e hidratação.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 59,90</span>
+            <span class="original-price">R$ 66,50</span>
+          </div>
+          <button class="add-to-cart" data-name="Óleo Corporal Relaxante" data-price="59.90">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 7 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/736x/b6/23/5e/b6235e2d288c61b53739d09b8b17ba55.jpg" alt="Esfoliante Facial Natural">
+        <div class="product-badge new">Novo</div>
+      </div>
+      <div class="product-info">
+        <h3>Esfoliante Facial Natural</h3>
+        <p>Esfoliante com açúcar orgânico e óleos vegetais.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 49,90</span>
+          </div>
+          <button class="add-to-cart" data-name="Esfoliante Facial Natural" data-price="49.90">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 8 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/1200x/ad/79/ee/ad79ee35d1550f584c3782c8d6130105.jpg" alt="Loção Corporal Hidratante">
+      </div>
+      <div class="product-info">
+        <h3>Loção Corporal Hidratante</h3>
+        <p>Loção leve com aloe vera e óleo de jojoba.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 52,90</span>
+          </div>
+          <button class="add-to-cart" data-name="Loção Corporal Hidratante" data-price="52.90">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 9 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/736x/cb/bb/0e/cbbb0e2de4925399406857a84a36d0e6.jpg" alt="Creme Anti-Idade Natural">
+        <div class="product-badge">-12%</div>
+      </div>
+      <div class="product-info">
+        <h3>Creme Anti-Idade Natural</h3>
+        <p>Creme facial com extratos botânicos que ajudam a reduzir linhas de expressão.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 92,90</span>
+            <span class="original-price">R$ 105,90</span>
+          </div>
+          <button class="add-to-cart" data-name="Creme Anti-Idade Natural" data-price="92.90">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 10 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/736x/60/5b/1f/605b1fa14edb4d1924ea971fe324ae8a.jpg" alt="Máscara Noturna Hidratante">
+        <div class="product-badge new">Novo</div>
+      </div>
+      <div class="product-info">
+        <h3>Máscara Noturna Hidratante</h3>
+        <p>Máscara de noite com ácido hialurônico para hidratação intensa.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 99,90</span>
+          </div>
+          <button class="add-to-cart" data-name="Máscara Noturna Hidratante" data-price="99.90">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 11 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/736x/8c/b1/e9/8cb1e9d8bc921f119ce7715361c3291a.jpg" alt="Tônico Facial Refrescante">
+      </div>
+      <div class="product-info">
+        <h3>Tônico Facial Refrescante</h3>
+        <p>Tônico natural com aloe vera e extratos botânicos.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 36,90</span>
+          </div>
+          <button class="add-to-cart" data-name="Tônico Facial Refrescante" data-price="36.90">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 12 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/1200x/57/88/02/578802f594ad5b39b9a5887ed8f79cee.jpg" alt="Gel Calmante Pós-Sol">
+        <div class="product-badge">-5%</div>
+      </div>
+      <div class="product-info">
+        <h3>Gel Calmante Pós-Sol</h3>
+        <p>Gel refrescante com aloe vera e camomila para acalmar a pele após exposição solar.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 29,90</span>
+            <span class="original-price">R$ 31,50</span>
+          </div>
+          <button class="add-to-cart" data-name="Gel Calmante Pós-Sol" data-price="29.90">+</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+    <!-- ===== CUIDADOS CAPILARES ===== -->
+    <div class="category-block">
+  <div class="section-title">
+    <h2 class="category-title">Cuidados Capilares</h2>
+    <p class="category-desc">Máscaras, shampoos, condicionadores e óleos naturais para cabelos fortes e saudáveis.</p>
+  </div>
+  <div class="products-grid">
+    <!-- Produto 1 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/736x/0c/5e/1d/0c5e1d148e7e7057340af885cea5939d.jpg" alt="Máscara Capilar Nutritiva">
+        <div class="product-badge">-20%</div>
+      </div>
+      <div class="product-info">
+        <h3>Máscara Capilar Nutritiva</h3>
+        <p>Máscara rica em óleos naturais e manteiga de karité para cabelos secos.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 68,90</span>
+            <span class="original-price">R$ 85,90</span>
+          </div>
+          <button class="add-to-cart" data-name="Máscara Capilar Nutritiva" data-price="68.90">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 2 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/736x/2d/f1/6a/2df16a3ec1cbb269476fbb709c632aaf.jpg" alt="Shampoo Suave Orgânico">
+      </div>
+      <div class="product-info">
+        <h3>Shampoo Suave Orgânico</h3>
+        <p>Shampoo natural que limpa sem ressecar, com aloe vera e camomila.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 42,90</span>
+          </div>
+          <button class="add-to-cart" data-name="Shampoo Suave Orgânico" data-price="42.90">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 3 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/736x/a7/dc/0f/a7dc0f71551900e25ff8d7414fa405dc.jpg" alt="Condicionador Hidratante">
+      </div>
+      <div class="product-info">
+        <h3>Condicionador Hidratante</h3>
+        <p>Condicionador com óleo de argan e manteiga de karité para fios macios.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 48,90</span>
+          </div>
+          <button class="add-to-cart" data-name="Condicionador Hidratante" data-price="48.90">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 4 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/736x/3e/8c/ba/3e8cbad6318c7fe9a2592cc2180c01af.jpg" alt="Óleo Capilar Revitalizante">
+        <div class="product-badge">-10%</div>
+      </div>
+      <div class="product-info">
+        <h3>Óleo Capilar Revitalizante</h3>
+        <p>Óleo com lavanda e jojoba, fortalece os fios e dá brilho natural.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 59,90</span>
+            <span class="original-price">R$ 66,50</span>
+          </div>
+          <button class="add-to-cart" data-name="Óleo Capilar Revitalizante" data-price="59.90">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 5 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/736x/1f/d8/49/1fd849e3aab40cc10d047b6073d031a0.jpg" alt="Leave-in Natural">
+      </div>
+      <div class="product-info">
+        <h3>Leave-in Natural</h3>
+        <p>Spray leve que protege e desembaraça cabelos sem silicone.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 39,90</span>
+          </div>
+          <button class="add-to-cart" data-name="Leave-in Natural" data-price="39.90">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 6 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/736x/b5/d9/64/b5d964f7edd66bc31f795c78d70ae1d8.jpg" alt="Tônico Capilar Fortificante">
+      </div>
+      <div class="product-info">
+        <h3>Tônico Capilar Fortificante</h3>
+        <p>Tônico natural que estimula o crescimento e fortalece raízes.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 54,90</span>
+          </div>
+          <button class="add-to-cart" data-name="Tônico Capilar Fortificante" data-price="54.90">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 7 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/736x/13/8c/60/138c60ec486cc636b1b9cf0a62a4a738.jpg" alt="Máscara Reconstrutora">
+        <div class="product-badge new">Novo</div>
+      </div>
+      <div class="product-info">
+        <h3>Máscara Reconstrutora</h3>
+        <p>Máscara rica em proteínas vegetais que recupera fios danificados.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 72,90</span>
+          </div>
+          <button class="add-to-cart" data-name="Máscara Reconstrutora" data-price="72.90">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 8 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/1200x/3a/e1/b7/3ae1b734fc039956e9e6a83787d1119b.jpg" alt="Creme de Pentear Natural">
+      </div>
+      <div class="product-info">
+        <h3>Creme de Pentear Natural</h3>
+        <p>Creme leve que define cachos e controla frizz com ingredientes naturais.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 46,90</span>
+          </div>
+          <button class="add-to-cart" data-name="Creme de Pentear Natural" data-price="46.90">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 9 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/736x/24/88/b5/2488b52bebb427b6fd045d86513769da.jpg" alt="Spray Protetor Natural">
+      </div>
+      <div class="product-info">
+        <h3>Spray Protetor Natural</h3>
+        <p>Protege os fios do calor do secador e do sol com ativos vegetais.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 38,90</span>
+          </div>
+          <button class="add-to-cart" data-name="Spray Protetor Natural" data-price="38.90">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 10 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/1200x/c5/fe/93/c5fe93e236150826c6432a27532b2116.jpg" alt="Shampoo Seco Natural">
+      </div>
+      <div class="product-info">
+        <h3>Shampoo Seco Natural</h3>
+        <p>Shampoo seco orgânico que refresca os fios e absorve oleosidade.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 41,90</span>
+          </div>
+          <button class="add-to-cart" data-name="Shampoo Seco Natural" data-price="41.90">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 11 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/736x/82/37/dc/8237dc680cb95673cb21c400dd6399ab.jpg" alt="Máscara Capilar Nutritiva Intensiva">
+        <div class="product-badge new">Novo</div>
+      </div>
+      <div class="product-info">
+        <h3>Máscara Capilar Nutritiva Intensiva</h3>
+        <p>Máscara intensiva que restaura a elasticidade dos fios e hidrata profundamente.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 79,90</span>
+          </div>
+          <button class="add-to-cart" data-name="Máscara Capilar Nutritiva Intensiva" data-price="79.90">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 12 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/1200x/ef/3d/84/ef3d84a0456fb31ea41008ef7b02f1d8.jpg" alt="Condicionador Reparador Natural">
+      </div>
+      <div class="product-info">
+        <h3>Condicionador Reparador Natural</h3>
+        <p>Condicionador natural que repara pontas duplas e mantém o brilho dos fios.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 52,90</span>
+          </div>
+          <button class="add-to-cart" data-name="Condicionador Reparador Natural" data-price="52.90">+</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+ <!-- ===== Maquiagem Natural ===== -->
+  <div class="category-block">
+  <div class="section-title">
+    <h2 class="category-title">Maquiagem Natural</h2>
+    <p class="category-desc">Produtos de maquiagem suaves, veganos e orgânicos, sem químicos agressivos.</p>
+  </div>
+  <div class="products-grid">
+
+    <!-- Produto 1 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/736x/77/c4/a3/77c4a3574fb4bad82c9771ec6b3394ea.jpg" alt="Base Natural">
+      </div>
+      <div class="product-info">
+        <h3>Base Natural</h3>
+        <p>Base orgânica que uniformiza o tom da pele sem ressecar.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 75,90</span>
+          </div>
+          <button class="add-to-cart" data-name="Base Natural" data-price="75.90">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 2 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/736x/6d/11/89/6d1189089e8ae39959ca6a33218b67ab.jpg" alt="Batom Vegano">
+      </div>
+      <div class="product-info">
+        <h3>Batom Vegano</h3>
+        <p>Batom cremoso feito com pigmentos naturais e manteiga de karité.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 32,90</span>
+          </div>
+          <button class="add-to-cart" data-name="Batom Vegano" data-price="32.90">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 3 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/736x/2a/03/6a/2a036aea9cf43bbe59ffaecc8f104eca.jpg" alt="Blush Natural">
+      </div>
+      <div class="product-info">
+        <h3>Blush Natural</h3>
+        <p>Blush em pó mineral que dá cor suave e natural às bochechas.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 28,90</span>
+          </div>
+          <button class="add-to-cart" data-name="Blush Natural" data-price="28.90">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 4 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/1200x/c3/21/4f/c3214f63004a078015a264d27f327024.jpg" alt="Máscara de Cílios Natural">
+      </div>
+      <div class="product-info">
+        <h3>Máscara de Cílios Natural</h3>
+        <p>Máscara vegana que alonga e dá volume aos cílios sem químicos agressivos.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 46,90</span>
+          </div>
+          <button class="add-to-cart" data-name="Máscara de Cílios Natural" data-price="46.90">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 5 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/736x/6a/fe/9f/6afe9f66df504c7cda78c2f61aee7e50.jpg" alt="Sombra Mineral">
+      </div>
+      <div class="product-info">
+        <h3>Sombra Mineral</h3>
+        <p>Sombra em pó solto, pigmentação suave, livre de parabenos.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 39,90</span>
+          </div>
+          <button class="add-to-cart" data-name="Sombra Mineral" data-price="39.90">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 6 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/736x/44/89/c7/4489c72255728c231beaf4db8818e600.jpg" alt="Iluminador Natural">
+      </div>
+      <div class="product-info">
+        <h3>Iluminador Natural</h3>
+        <p>Iluminador suave, feito com ingredientes minerais e veganos.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 34,90</span>
+          </div>
+          <button class="add-to-cart" data-name="Iluminador Natural" data-price="34.90">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 7 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/1200x/8d/a7/ba/8da7bab93831738973a0198f4cb5cde1.jpg" alt="Corretivo Vegano">
+      </div>
+      <div class="product-info">
+        <h3>Corretivo Vegano</h3>
+        <p>Corretivo em creme, cobertura natural sem aditivos químicos.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 41,90</span>
+          </div>
+          <button class="add-to-cart" data-name="Corretivo Vegano" data-price="41.90">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 8 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/1200x/8e/8d/17/8e8d1783cfb0bd192930f267687ce5ad.jpg" alt="Batom Líquido Natural">
+      </div>
+      <div class="product-info">
+        <h3>Batom Líquido Natural</h3>
+        <p>Batom líquido vegano com acabamento matte e cores intensas.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 37,90</span>
+          </div>
+          <button class="add-to-cart" data-name="Batom Líquido Natural" data-price="37.90">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 9 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/1200x/29/d2/47/29d24740358f5a01c58c9bc6604c2f90.jpg" alt="Pó Compacto Natural">
+      </div>
+      <div class="product-info">
+        <h3>Pó Compacto Natural</h3>
+        <p>Pó facial vegano que uniformiza e controla brilho da pele.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 44,90</span>
+          </div>
+          <button class="add-to-cart" data-name="Pó Compacto Natural" data-price="44.90">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 10 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/1200x/b5/64/f8/b564f8b849ab86d53f00f7f2471fedb5.jpg" alt="Gloss Labial Natural">
+      </div>
+      <div class="product-info">
+        <h3>Gloss Labial Natural</h3>
+        <p>Gloss vegano que hidrata e dá brilho natural aos lábios.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 29,90</span>
+          </div>
+          <button class="add-to-cart" data-name="Gloss Labial Natural" data-price="29.90">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 11 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/736x/7a/c8/5d/7ac85d4e9215c65ccd34a6e6bda7eda8.jpg" alt="Batom Hidratante Natural">
+      </div>
+      <div class="product-info">
+        <h3>Batom Hidratante Natural</h3>
+        <p>Batom com manteiga de cacau e pigmentos orgânicos.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 33,90</span>
+          </div>
+          <button class="add-to-cart" data-name="Batom Hidratante Natural" data-price="33.90">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 12 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://i.pinimg.com/1200x/2c/f5/b9/2cf5b9eac51582ac061319e2b2cbcf07.jpg" alt="Sombra Cremosa Natural">
+      </div>
+      <div class="product-info">
+        <h3>Sombra Cremosa Natural</h3>
+        <p>Sombra vegana cremosa, pigmentação intensa e natural.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="current-price">R$ 36,90</span>
+          </div>
+          <button class="add-to-cart" data-name="Sombra Cremosa Natural" data-price="36.90">+</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+</section>
+
 
     <!-- Footer -->
     <footer id="contato">
@@ -917,76 +1686,244 @@
                 </div>
                 <div class="footer-section">
                     <h3>Contato</h3>
-                    <p><strong>Telefone:</strong> (11) 9999-8888</p>
+                    <p><strong>Telefone:</strong> (62) 8888-8888</p>
                     <p><strong>E-mail:</strong> contato@naturabella.com.br</p>
                     <p><strong>Endereço:</strong><br>Rua das Flores, 123<br>Goiás - GO</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Natura Bella. Todos os direitos reservados.</p>
+                <p>&copy; 2025 Natura Bella. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Smooth scrolling para links internos
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
+  <script>
+  // Smooth scroll para links internos
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    const href = anchor.getAttribute('href');
+    // só aplica se o href começar com # e existir um elemento correspondente
+    if(href.length > 1) {
+      const target = document.querySelector(href);
+      if(target) {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
-
-        // Contador do carrinho
-        let cartCount = 0;
-        const cartCountElement = document.querySelector('.cart-count');
-        const addToCartButtons = document.querySelectorAll('.add-to-cart');
-
-        addToCartButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                cartCount++;
-                cartCountElement.textContent = cartCount;
-                
-                // Animação visual
-                this.style.transform = 'scale(1.3)';
-                setTimeout(() => {
-                    this.style.transform = 'scale(1)';
-                }, 200);
-            });
-        });
-
-        // Newsletter form
-        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const inputs = this.querySelectorAll('input');
-    const isValid = Array.from(inputs).every(input => input.value.trim() !== '');
-
-    if (isValid) {
-        alert('Obrigado por se inscrever! Você receberá nossas novidades em breve.');
-        inputs.forEach(input => input.value = '');
-    } else {
-        alert('Por favor, preencha todos os campos.');
+      }
     }
+  });
+
+  // Newsletter form
+  const newsletterForm = document.querySelector('.newsletter-form');
+  if(newsletterForm){
+    newsletterForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = this.querySelector('input').value;
+      if(email){
+        alert('Obrigado por se inscrever! Você receberá nossas novidades em breve.');
+        this.querySelector('input').value = '';
+      }
+    });
+  }
+
+  // Busca
+  const searchInput = document.querySelector('.search-box input');
+  if(searchInput){
+    searchInput.addEventListener('keypress', function(e){
+      if(e.key === 'Enter'){
+        e.preventDefault();
+        const searchTerm = this.value;
+        if(searchTerm){
+          alert(`Buscando por: ${searchTerm}`);
+        }
+      }
+    });
+  }
+  // Seleciona todos os botões de adicionar ao carrinho
+const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+const cartCountElement = document.querySelector('.cart-count');
+
+// Pega o carrinho do localStorage ou cria vazio
+let cart = JSON.parse(localStorage.getItem('cart')) || {};
+
+// Atualiza contador do carrinho
+function updateCartCount() {
+    let totalItems = Object.values(cart).reduce((sum, item) => sum + item.quantity, 0);
+    cartCountElement.textContent = totalItems;
+}
+
+document.querySelectorAll(".add-to-cart").forEach(button => {
+    button.addEventListener("click", function() {
+        const productCard = this.closest(".product-card");
+        const name = this.dataset.name;
+        const price = this.dataset.price;
+        const image = productCard.querySelector("img").src;
+
+        addToCart(name, price, image);
+    });
 });
 
+// Adiciona item ao carrinho
+// addToCartButtons.forEach(button => {
+//     button.addEventListener('click', () => {
+//         const name = button.getAttribute('data-name');
+//         const price = parseFloat(button.getAttribute('data-price'));
 
-        // Busca
-        document.querySelector('.search-box input').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                e.preventDefault();
-                const searchTerm = this.value;
-                if (searchTerm) {
-                    alert(`Buscando por: ${searchTerm}`);
-                }
-            }
-        });
-    </script>
-    
-</body>
-</html>
+//         if(cart[name]) {
+//             cart[name].quantity += 1;
+//         } else {
+//             cart[name] = {
+//                 price: price,
+//                 quantity: 1
+//             };
+//         }
+
+//         localStorage.setItem('cart', JSON.stringify(cart));
+//         updateCartCount();
+//     });
+// });
+
+// Atualiza contador  ao carregar a página
+updateCartCount();
+
+const cartBtn = document.querySelector('.cart-btn');
+if(cartBtn){
+    cartBtn.addEventListener('click', () => {
+        window.location.href = "carrinho.html"; // caminho da página do carrinho
+    });
+}
+
+function addToCart(name, price, image) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || {};
+
+    if (!cart[name]) {
+        cart[name] = {
+            price: price,
+            quantity: 1,
+            image: image  // agora isso sempre receberá o src certo
+        };
+    } else {
+        cart[name].quantity++;
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+// function addToCart(name, price, image) {
+//     let cart = JSON.parse(localStorage.getItem("cart")) || {};
+
+//     if (!cart[name]) {
+//         cart[name] = {
+//             price: price,
+//             quantity: 1,
+//             image: image   // <-- ISSO PRECISA EXISTIR
+//         };
+//     } else {
+//         cart[name].quantity++;
+//     }
+
+//     localStorage.setItem("cart", JSON.stringify(cart));
+// }
+
+
+</script>
+<style>
+/* ====== HERO SECTION (versão menor) ====== */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  height: 40vh; /* altura bem menor */
+  display: flex;
+  align-items: flex-start; /* texto mais pra cima */
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  padding-top: 60px; /* controla a distância do topo */
+}
+
+/* Container */
+.hero .container {
+  max-width: 700px;
+  padding: 0 15px;
+}
+
+/* Título */
+.hero h1 {
+  font-size: 2rem; /* menor */
+  font-weight: 700;
+  color: #e8ffe8;
+  margin-bottom: 6px;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+}
+
+/* Subtítulo */
+.hero .subtitle {
+  font-size: 1.2rem;
+  color: #b2ffb2;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+/* Parágrafo */
+.hero p {
+  font-size: 0.95rem;
+  color: #f0fff0;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+/* Botões */
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+/* Botão verde */
+.btn-primary {
+  background-color: #2d5016;
+  color: #fff;
+  border: 2px solid #2d5016;
+}
+
+.btn-primary:hover {
+  background-color: #3e7323;
+}
+
+/* Botão transparente */
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn-outline:hover {
+  background-color: #fff;
+  color: #2d5016;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .hero {
+    height: 35vh;
+    padding-top: 40px;
+  }
+  .hero h1 { font-size: 1.5rem; }
+  .hero .subtitle { font-size: 1rem; }
+  .hero p { font-size: 0.85rem; }
+  .btn-group { flex-direction: column; gap: 8px; }
+}
+
+
+
+
+</style>

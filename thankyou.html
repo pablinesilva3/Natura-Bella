@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pedido Confirmado - Natura Bella</title>
+
+<style>
+body {
+    margin:0;
+    padding:0;
+    background:#e6f4ea;
+    font-family: Arial, sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container {
+    background:white;
+    padding:40px;
+    max-width:500px;
+    width:90%;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity:0; transform:translateY(20px); }
+    to   { opacity:1; transform:translateY(0); }
+}
+
+h1 {
+    color:#2d6a4f;
+    margin-bottom:15px;
+    font-size:2rem;
+}
+
+p {
+    color:#333;
+    font-size:1.1rem;
+    line-height:1.6;
+}
+
+.checkmark {
+    font-size:65px;
+    color:#2d6a4f;
+    margin-bottom:15px;
+}
+
+.order-number {
+    margin-top:20px;
+    font-weight:bold;
+    color:#1b4e36;
+    font-size:1.1rem;
+}
+
+.btn-home {
+    margin-top:30px;
+    display:inline-block;
+    padding:14px 25px;
+    background:#2d6a4f;
+    color:white;
+    text-decoration:none;
+    border-radius:12px;
+    font-size:1.1rem;
+    transition:0.3s;
+}
+
+.btn-home:hover {
+    background:#1b4e36;
+    transform:translateY(-2px);
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="checkmark">✔️</div>
+
+    <h1>Pedido Confirmado!</h1>
+
+    <p>
+        Obrigado por escolher a <strong>Natura Bella</strong>!  
+        Seu pedido foi recebido com carinho e já está sendo preparado.  
+    </p>
+
+    <p class="order-number">
+        Número do Pedido: <span id="order-id"></span>
+    </p>
+
+    <a href="index.html" class="btn-home">Voltar à Loja</a>
+</div>
+
+
+<script>
+// Gera número aleatório de pedido
+const orderId = "NB-" + Math.floor(Math.random() * 900000 + 100000);
+document.getElementById("order-id").textContent = orderId;
+
+// Limpa o carrinho após compra
+localStorage.removeItem('cart');
+</script>
+
+</body>
+</html>
